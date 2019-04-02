@@ -5,42 +5,27 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Twig\Environment;
 
 class DefaultController
 {
     /**
      * @Route("/", name="homepage")
      * @return Response
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      */
-    public function homepageAction()
+    public function homepageAction(Environment $twig)
     {
-        return new Response('<!DOCTYPE>
-        <html>
-            <head>
-            <title>My homepage</title>
-            <style>
-                #ball {
-                    background-color: #8959A8;
-                    width: 3rem;
-                    height: 3rem;
-                    border: 2px solid darkred;
-                    border-radius: 50%;
-                    transform: rotate(90deg);
-                }
-                #ball:hover {
-                    transform: translateX(150px);
-                    background-color: #5eb5e0;
-                }
-            </style>
-            </head>
-            <body>
-                <h2 style="color: darkturquoise">Hello World!</h2> 
-                <a href="/terms">Terms</a>
-                <p>Some text here would be nice...</p>
-                <div id="ball"></div>
-            </body>
-        </html>
-        ');
+        $color = 'blue';
+        return new Response(
+            $twig->render(
+                'default/homepage.html.twig',
+                [
+                    'color' => $color,
+                    'itemList' => [0, 1, 2, 34, 5, 7, 99]
+                ]));
     }
     /**
      * @Route("/terms", name="term_of_service")
