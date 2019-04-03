@@ -2,7 +2,7 @@
 
 {% block title %}{{ parent() }} - Home{% endblock %}
 {% block body %}
-    <p>The color of the day is: {{ color|default('red') }}</p>
+    <p style="color: {{ color|default('red') }}">The color of the day is: {{ color|default('red') }}</p>
 
     {% set currentDate = date() %}
     {{ currentDate|date('Y-m-d H:i:s') }}

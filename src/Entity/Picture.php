@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PictureRepository")
- * @ORM\Table(indexes={})
+ * @ORM\Table(indexes={@ORM\Index(name="creatin_date", columns={"created_at"})})
  */
 class Picture
 {
