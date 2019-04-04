@@ -1,0 +1,17 @@
+NAV.HOME: 'Home'
+NAV.TERMS: 'Terms'
+NAV.REGISTER: 'Register'
+NAV.LOGIN: 'Login'
+LOGIN.INFO: 'Please sign in'
+LOGIN.USERNAME: 'Username'
+LOGIN.PASSWORD: 'Password'
+LOGIN.SUBMIT: 'Sign in'
+FORM:
+  USER:
+    PASSWORD:
+      LABEL: 'Password'
+      LABEL2: 'Repeat password'
+    TOS:
+      LABEL: 'Accept terms of services'
+    USERNAME:
+      LABEL: 'Username'
