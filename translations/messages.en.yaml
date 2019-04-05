@@ -2,6 +2,9 @@ NAV.HOME: 'Home'
 NAV.TERMS: 'Terms'
 NAV.REGISTER: 'Register'
 NAV.LOGIN: 'Login'
+NAV.LOGOUT: 'Logout'
+NAV:
+  LOGGED_AS: 'Logged as: '
 LOGIN.INFO: 'Please sign in'
 LOGIN.USERNAME: 'Username'
 LOGIN.PASSWORD: 'Password'
@@ -15,3 +18,18 @@ FORM:
       LABEL: 'Accept terms of services'
     USERNAME:
       LABEL: 'Username'
+MAIL:
+  REGISTER:
+    TITLE: 'Activate your account'
+    INFO: 'Hi %name%, your account was successfully created on Numeripic, just one more step - activate it please!'
+    HTML:
+      LINK:
+        INFO: 'Please click'
+        LABEL: 'on this link'
+    TXT:
+      LINK:
+        INFO: 'Please copy this link in your browser: '
+REGISTRATION:
+  ACTIVATION:
+    TITLE: 'Numeripic - activation needed'
+    INFO: 'Your account was created, please check your email account to activate the profile'

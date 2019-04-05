@@ -3,14 +3,12 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-    <div class="container" style="align-content: center; width: 50%;">
+    <div class="container w-50">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
-    <div class="card-header">
-        <h1 class="h3 mb-3 font-weight-normal">{{ 'LOGIN.INFO'|trans }}</h1>
-    </div>
-    <div class="card-body">
+        <h1>{{ 'LOGIN.INFO'|trans }}</h1>
+        <div class="card-body">
         <form method="post">
         <label for="inputUsername" class="sr-only">{{ 'LOGIN.USERNAME'|trans }}</label>
         <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>

@@ -12,7 +12,16 @@
                 </a>
             </li>
         </ul>
+
         <ul class="navbar-nav my-2 my-lg-0">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li class="nav-item {% if app.request.attributes.get('_route')  == 'app_logout' %}active{% endif %}">
+                    <a class="nav-link" href="{{ path('app_logout') }}">
+                        {{ 'NAV.LOGOUT'|trans }}
+                    </a>
+                </li>
+            {% else %}
+                <h3>{{ 'NAV.LOGGED_AS'|trans({'%name%' : app.user.username()}) }}</h3>
             <li class="nav-item {% if app.request.attributes.get('_route')  == 'app_register' %}active{% endif %}">
                 <a class="nav-link" href="{{ path('app_register') }}">
                     {{ 'NAV.REGISTER'|trans }}
@@ -23,6 +32,8 @@
                     {{ 'NAV.LOGIN'|trans }}
                 </a>
             </li>
+
+            {% endif %}
         </ul>
     </div>
 </nav>
