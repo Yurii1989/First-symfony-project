@@ -19,6 +19,8 @@ security:
             guard:
                 authenticators:
                     - App\Security\UserAuthenticator
+            logout:
+                path: app_logout
 
             # activate different ways to authenticate
 
@@ -33,3 +35,6 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
+        - { path: '^/app_logout$', roles: ROLE_USER }
+        - { path: '^/add', roles: ROLE_USER }
+        - { path: '^/(?!(register)|(login)).*$', roles: ROLE_USER }

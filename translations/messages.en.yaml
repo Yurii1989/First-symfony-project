@@ -4,7 +4,7 @@ NAV.REGISTER: 'Register'
 NAV.LOGIN: 'Login'
 NAV.LOGOUT: 'Logout'
 NAV:
-  LOGGED_AS: 'Logged as: '
+  LOGGED_AS: 'Logged as: %name%'
 LOGIN.INFO: 'Please sign in'
 LOGIN.USERNAME: 'Username'
 LOGIN.PASSWORD: 'Password'
@@ -18,6 +18,17 @@ FORM:
       LABEL: 'Accept terms of services'
     USERNAME:
       LABEL: 'Username'
+  PICTURE:
+    TITLE:
+      LABEL: 'Title'
+    DESCRIPTION:
+      LABEL: 'Description'
+    TAGS:
+      LABEL: 'Tags'
+    FILE:
+      LABEL: 'Picture'
+    SUBMIT:
+      LABEL: 'Submit'
 MAIL:
   REGISTER:
     TITLE: 'Activate your account'
