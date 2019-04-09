@@ -5,10 +5,11 @@
 {% block body %}
     <div class="row m-0">
     {% for picture in pictures %}
-        <div class="card col-4">
+        <div class="card col-4" style="height: 600px">
             <img src="{{ path('get_picture_content', {'picture': picture.getId()}) }}"
                      class="card-img-top"
-                    alt="{{ picture.getTitle() }}">
+                    alt="{{ picture.getTitle() }}"
+                    style="height: 400px">
             <div class="card-body">
                 <h4 class="card-title">{{ picture.getTitle() }}</h4>
                 <p class="card-text">{{ picture.getDescription() }}</p>
@@ -24,4 +25,12 @@
         </div>
     {% endfor %}
     </div>
+    <div class="count">
+        {{ pictures.getTotalItemCount }}
+    </div>
+    <div class="navigation">
+        {{ knp_pagination_render(pictures) }}
+    </div>
+
+
 {% endblock %}
