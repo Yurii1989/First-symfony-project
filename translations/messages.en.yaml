@@ -3,6 +3,7 @@ NAV.TERMS: 'Terms'
 NAV.REGISTER: 'Register'
 NAV.LOGIN: 'Login'
 NAV.LOGOUT: 'Logout'
+NAV.ADDPICTURE: 'Add picture'
 NAV:
   LOGGED_AS: 'Logged as: %name%'
 LOGIN.INFO: 'Please sign in'

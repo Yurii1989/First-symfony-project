@@ -33,7 +33,8 @@ class PictureFormType extends AbstractType
                     'label' => 'FORM.PICTURE.TAGS.LABEL',
                     'class' => Tag::class,
                     'choice_label' => 'label',
-                    'multiple' => true
+                    'multiple' => true,
+                    'required' => false
                 ])
             ->add('file',
                 FileType::class,
@@ -42,7 +43,7 @@ class PictureFormType extends AbstractType
                     'mapped' => false,
                     'constraints' => [
                         new Image([
-                        'mimeTypes' => ['image/png', 'image/jpg'],
+                        'mimeTypes' => ['image/png', 'image/jpeg'],
                         'maxSize' => '5M',
                         'minWidth' => 640,
                         'minHeight' => 640
