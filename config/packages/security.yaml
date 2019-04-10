@@ -37,4 +37,4 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: '^/app_logout$', roles: ROLE_USER }
         - { path: '^/add', roles: ROLE_USER }
-        - { path: '^/(?!(register)|(login)).*$', roles: ROLE_USER }
+       # to restrict the access to any page or API for unregistered users - { path: '^/(?!(register)|(login)).*$', roles: ROLE_USER }
